@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="h-screen">
+    <header id="header" class="p-4 dark:bg-gray-800 dark:text-gray-100">
+        <div class="container flex justify-between h-16 mx-auto">
+            <div class="flex">
+                <a rel="noopener noreferrer" href="#" aria-label="Back to homepage" class="flex items-center p-2"
+                    onclick="window.location.reload()">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 32 32"
+                        class="w-8 h-8 dark:text-violet-400">
+                        <path
+                            d="M27.912 7.289l-10.324-5.961c-0.455-0.268-1.002-0.425-1.588-0.425s-1.133 0.158-1.604 0.433l0.015-0.008-10.324 5.961c-0.955 0.561-1.586 1.582-1.588 2.75v11.922c0.002 1.168 0.635 2.189 1.574 2.742l0.016 0.008 10.322 5.961c0.455 0.267 1.004 0.425 1.59 0.425 0.584 0 1.131-0.158 1.602-0.433l-0.014 0.008 10.322-5.961c0.955-0.561 1.586-1.582 1.588-2.75v-11.922c-0.002-1.168-0.633-2.189-1.573-2.742zM27.383 21.961c0 0.389-0.211 0.73-0.526 0.914l-0.004 0.002-10.324 5.961c-0.152 0.088-0.334 0.142-0.53 0.142s-0.377-0.053-0.535-0.145l0.005 0.002-10.324-5.961c-0.319-0.186-0.529-0.527-0.529-0.916v-11.922c0-0.389 0.211-0.73 0.526-0.914l0.004-0.002 10.324-5.961c0.152-0.090 0.334-0.143 0.53-0.143s0.377 0.053 0.535 0.144l-0.006-0.002 10.324 5.961c0.319 0.185 0.529 0.527 0.529 0.916z">
+                        </path>
+                        <path
+                            d="M22.094 19.451h-0.758c-0.188 0-0.363 0.049-0.515 0.135l0.006-0.004-4.574 2.512-5.282-3.049v-6.082l5.282-3.051 4.576 2.504c0.146 0.082 0.323 0.131 0.508 0.131h0.758c0.293 0 0.529-0.239 0.529-0.531v-0.716c0-0.2-0.11-0.373-0.271-0.463l-0.004-0.002-5.078-2.777c-0.293-0.164-0.645-0.26-1.015-0.26-0.39 0-0.756 0.106-1.070 0.289l0.010-0.006-5.281 3.049c-0.636 0.375-1.056 1.055-1.059 1.834v6.082c0 0.779 0.422 1.461 1.049 1.828l0.009 0.006 5.281 3.049c0.305 0.178 0.67 0.284 1.061 0.284 0.373 0 0.723-0.098 1.027-0.265l-0.012 0.006 5.080-2.787c0.166-0.091 0.276-0.265 0.276-0.465v-0.716c0-0.293-0.238-0.529-0.529-0.529z">
+                        </path>
+                    </svg>
+                </a>
+                <ul class="items-stretch hidden space-x-3 lg:flex ">
+                    <li class="flex" onclick="window.location.reload()">
+                        <a rel="noopener noreferrer" href="#"
+                            class="qaraYazi flex items-center px-4 -mb-1 text-3xl border-b-2 dark:border-transparent">
+                            Country App
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="items-center flex-shrink-0 hidden lg:flex">
+                <label class="inline-flex items-center space-x-4 cursor-pointer dark:text-gray-100">
+                    <span class="qaraYazi">Light</span>
+                    <span class="relative">
+                        <input id="Toggle1" type="checkbox" class="hidden peer" onclick="darkMode()">
+                        <div
+                            class="w-10 h-6 rounded-full shadow-inner dark:bg-gray-400 peer-checked:dark:bg-violet-400">
+                        </div>
+                        <div
+                            class="absolute inset-y-0 left-0 w-4 h-4 m-1 rounded-full shadow peer-checked:right-0 peer-checked:left-auto dark:bg-gray-800">
+                        </div>
+                    </span>
+                    <span class="qaraYazi">Dark</span>
+                </label>
+
+            </div>
+
+            <button class="p-4 lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="w-6 h-6 dark:text-gray-100">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="h-full">
+        <section id="allCountry" class=" dark:bg-gray-800 dark:text-gray-100 ">
+            <div class="container p-6 mx-auto space-y-8">
+                <div class="space-y-2 text-center">
+                    <h2 class="text-3xl font-bold qaraYazi">Ölkə axtarış sistemi</h2>
+                </div>
+
+                <div class="m-auto w-[400px] flex justify-between items-end gap-5">
+                    <fieldset class="w-full space-y-1 dark:text-gray-100">
+                        <label for="Search" class="hidden">Search</label>
+                        <div class="relative">
+                            <span class="absolute inset-y-0 left-0 flex items-center pl-2">
+                                <button type="button" title="search" class="p-1 focus:outline-none focus:ring">
+                                    <svg fill="currentColor" viewBox="0 0 512 512" class="w-4 h-4 dark:text-gray-400">
+                                        <path
+                                            d="M479.6,399.716l-81.084-81.084-62.368-25.767A175.014,175.014,0,0,0,368,192c0-97.047-78.953-176-176-176S16,94.953,16,192,94.953,368,192,368a175.034,175.034,0,0,0,101.619-32.377l25.7,62.2L400.4,478.911a56,56,0,1,0,79.2-79.195ZM48,192c0-79.4,64.6-144,144-144s144,64.6,144,144S271.4,336,192,336,48,271.4,48,192ZM456.971,456.284a24.028,24.028,0,0,1-33.942,0l-76.572-76.572-23.894-57.835L380.4,345.771l76.573,76.572A24.028,24.028,0,0,1,456.971,456.284Z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </span>
+                            <input type="search" name="Search" placeholder="Search..." id="searchInp" oninput="show()"
+                                class="w-32 h-full py-2 pl-10 text-sm rounded-md sm:w-auto focus:outline-none dark:bg-gray-600 dark:text-gray-100 focus:dark:bg-gray-900 focus:dark:border-violet-400">
+                        </div>
+                    </fieldset>
+                    <select id="countries" onchange="show()"
+                        class="py-1.5   bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                        <option value="">All</option>
+                        <option value="Asia">Asia</option>
+                        <option value="Europe">Europe</option>
+                        <option value="Africa">Africa</option>
+                        <option value="Americas">Americas</option>
+                        <option value="Polar">Polar</option>
+                        <option value="Oceania">Oceania</option>
+                        <option value="Antarctic Ocean"> Antarctic Ocean</option>
+                    </select>
+
+                </div>
+                <div id="blog" class="grid grid-cols-1 gap-x-4 gap-y-8 md:grid-cols-2 lg:grid-cols-4">
+                    <!-- Burada map ile gelenlerdir  -->
+                </div>
+
+                <div class="flex justify-center">
+                    <button type="button" onclick="addCountry()"
+                        class="px-6 py-3 text-sm rounded-md hover:underline dark:bg-gray-900 dark:text-gray-400">Load
+                        more country...</button>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <div id="postBlog" class="hidden h-full">
+        </div>
+    </main>
+
+
+    <script>
+        const url = "https://raw.githubusercontent.com/TheOksigen/purfect_data/main/country.json"
+        const blog = document.querySelector("#blog")
+        const countries = document.querySelector("#countries")
+        const searchInp = document.querySelector("#searchInp")
+        const postBlog = document.querySelector("#postBlog")
+        const allCountry = document.querySelector("#allCountry")
+        let borderBtn
+        let kod = ""
+        let n = 10
+        let deyisen
+        function show() {
+            kod = ""
+            postBlog.innerHTML = ""
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    deyisen = data
+                    console.log(data[1]);
+                    data
+                        .filter(item => item.name != "Armenia")
+                        .filter(item => item.region.includes(countries.value))
+                        .filter(item => item.name.toLocaleLowerCase().startsWith(searchInp.value.toLocaleLowerCase()))
+                        .slice(0, n)
+                        ?.map(item => {
+                            kod += `<article id="postElement" onclick="opsi('${item.alpha3Code}')" class="flex flex-col dark:bg-gray-900">
+                        <a rel="noopener noreferrer" href="#" aria-label="Te nulla oportere reprimique his dolorum">
+                            <img alt="" class="object-cover w-full h-52 dark:bg-gray-500" src="${item.flag}">
+                        </a>
+                        <div class="flex flex-col flex-1 p-6">
+                            <h1 class="flex-1 py-2 text-lg font-semibold leadi">${item.name}</h1>
+                            <p class="text-gray-400"><b class="text-white">Population:</b> ${item.population}</p>
+                            <p class="text-gray-400"><b class="text-white">Region:</b> ${item.region}</p>
+                            <p class="text-gray-400"><b class="text-white">Capital:</b> ${item.capital}</p>
+                        </div>
+                    </article>`
+                        })
+
+                    blog.innerHTML = kod
+                    kod = ""
+                })
+        }; show()
+
+        function opsi(data){
+            post(data)
+            document.querySelector("#allCountry").classList.toggle("hidden")
+            postBlog.classList.toggle("hidden")
+        }
+        let addCountry = () => { n += 10; show() }
+
+        function post(data) {
+            deyisen
+                .filter(item => item.alpha3Code == data)
+                .map(item => {
+                    kod += `<div rel="noopener noreferrer" href="#" id="tekGorus"
+                        class="dark:bg-gray-800 dark:text-gray-100 block pt-8 max-w-sm gap-3 mx-auto h-full sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12">
+                        <img src="${item.flag}" alt=""
+                            class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
+                        <div class="p-6 space-y-2 lg:col-span-5 ">
+                            <h3 class="text-2xl font-semibold sm:text-4xl group-hover:underline group-focus:underline" > ${item.name}</h3>
+                            <p >Native Name: ${item.nativeName}</p>
+                            <p>Population: ${item.population}</p>
+                            <p>Region: ${item.region}</p>
+                            <p>Subregion: ${item.subregion}</p>
+                            <p>Capital: ${item.capital}</p>
+                            <p>Top Level Domain: ${item.topLevelDomain[0]}</p>
+                            <br>
+                            <p>Neighboring Countries:</p>
+                            <div id="borderBtn">
+                                ${item.borders!= undefined? item.borders.map(elem=> `<button onclick="post('${elem}')" class="p-1 m-1 bg-slate-600">${elem}</button>`).join(""):` ${item.name} - ada ölkəsidir, ada ölkələrində qonşu olmur. `}
+                            </div>
+                        </div>
+                    </div>`
+                        
+                })
+            postBlog.innerHTML = kod
+            kod=""
+        }
+
+
+        function darkMode() {
+            allCountry.classList.toggle("dark:bg-gray-800")
+            allCountry.classList.toggle("bg-slate-200")
+            document.querySelector("#header").classList.toggle("dark:bg-gray-800")
+            document.querySelector("#header").classList.toggle("bg-slate-200")
+            document.querySelectorAll(".qaraYazi").forEach(item => item.classList.toggle("text-black"))
+            // document.querySelector("#tekGorus").classList.toggle("dark:bg-gray-800")
+        }
+
+    </script>
+
+
+</body>
+
+</html>
